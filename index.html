@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HyperFlow Protocol - Development Roadmap</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Development Roadmap - HyperFlow Protocol</title>
     <style>
         * {
             margin: 0;
@@ -13,146 +12,125 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0f1419;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0f1c;
             color: #e2e8f0;
             line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
         }
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
         
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #2d3748;
-        }
-        
-        h1 {
-            color: #14b8a6;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
         }
         
         .back-link {
             display: inline-block;
-            margin-bottom: 20px;
-            color: #14b8a6;
-            text-decoration: none;
-            font-weight: 500;
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
             padding: 10px 20px;
-            border: 1px solid #14b8a6;
-            border-radius: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-bottom: 30px;
             transition: all 0.3s ease;
         }
         
         .back-link:hover {
-            background: #14b8a6;
-            color: #0f1419;
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        h1 {
+            color: #00d4ff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
         .content {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
-            border: 1px solid #334155;
-            border-radius: 16px;
+            background: rgba(15, 25, 45, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
             padding: 40px;
             backdrop-filter: blur(10px);
         }
         
         .content h2 {
-            color: #14b8a6;
-            font-size: 1.5rem;
-            margin: 30px 0 15px 0;
-            border-bottom: 1px solid rgba(20, 184, 166, 0.3);
-            padding-bottom: 10px;
+            color: #00d4ff;
+            font-size: 1.6rem;
+            margin: 30px 0 20px 0;
         }
         
-        .content h2:first-of-type {
+        .content h2:first-child {
             margin-top: 0;
         }
         
         .content h3 {
-            color: #06b6d4;
-            font-size: 1.2rem;
-            margin: 25px 0 12px 0;
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
         }
         
         .content p {
             color: #cbd5e1;
-            margin-bottom: 15px;
-            text-align: justify;
+            margin-bottom: 20px;
         }
         
-        .phase-card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid #334155;
-            border-radius: 12px;
+        .phase-section {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 10px;
             padding: 30px;
-            margin: 25px 0;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .phase-card:hover {
-            border-color: #14b8a6;
-            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.1);
-        }
-        
-        .phase-number {
-            position: absolute;
-            top: -15px;
-            left: 30px;
-            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
+            margin: 30px 0;
         }
         
         .phase-title {
-            color: #14b8a6;
-            font-size: 1.5rem;
+            color: #00d4ff;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin: 10px 0 15px 0;
+            margin-bottom: 10px;
         }
         
-        .targets-table {
-            background: rgba(6, 182, 212, 0.1);
-            border: 1px solid #06b6d4;
-            border-radius: 12px;
+        .phase-description {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .targets-section {
+            background: rgba(0, 212, 255, 0.08);
+            border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
         }
         
-        .targets-table h4 {
-            color: #06b6d4;
-            margin: 0 0 15px 0;
+        .targets-title {
+            color: #00d4ff;
+            font-size: 1.1rem;
             text-align: center;
+            margin-bottom: 15px;
         }
         
         .table-container {
             overflow-x: auto;
-            border-radius: 8px;
-            border: 1px solid #334155;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #0f172a;
-            min-width: 500px;
+            background: rgba(10, 15, 28, 0.8);
         }
         
         th {
-            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
-            color: white;
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
             padding: 12px 15px;
             text-align: left;
             font-weight: 600;
@@ -161,8 +139,9 @@
         
         td {
             padding: 10px 15px;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
             color: #e2e8f0;
+            font-size: 0.9rem;
         }
         
         tr:last-child td {
@@ -170,25 +149,41 @@
         }
         
         tr:hover {
-            background: rgba(20, 184, 166, 0.05);
+            background: rgba(0, 212, 255, 0.03);
+        }
+        
+        .info-list {
+            color: #cbd5e1;
+            margin: 15px 0 15px 25px;
+        }
+        
+        .info-list li {
+            margin-bottom: 8px;
+        }
+        
+        .info-list strong {
+            color: #00d4ff;
         }
         
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
+            .container {
+                padding: 20px 15px;
             }
             
             .content {
                 padding: 25px;
             }
             
-            .phase-card {
-                padding: 25px;
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .phase-section {
+                padding: 20px;
             }
             
             table {
                 font-size: 0.8rem;
-                min-width: 400px;
             }
             
             th, td {
@@ -201,20 +196,19 @@
     <div class="container">
         <div class="header">
             <a href="https://clockerwork02.github.io" class="back-link">← Back to Main Whitepaper</a>
-            <h1>HyperFlow Protocol - Development Roadmap</h1>
+            <h1>Development Roadmap</h1>
         </div>
         
         <div class="content">
-            <h2>Development Roadmap Overview</h2>
-            <p>The HyperFlow Protocol follows a systematic 5-phase development approach, progressing from core infrastructure through advanced ecosystem features. Each phase builds upon previous achievements while targeting significant growth in total value locked and user adoption.</p>
+            <h2>HyperFlow Protocol Development Timeline</h2>
+            <p>Systematic 5-phase development approach targeting progressive growth from foundational infrastructure to industry-standard global DeFi platform.</p>
             
-            <div class="phase-card">
-                <div class="phase-number">Phase 1</div>
-                <div class="phase-title">Core Infrastructure Development</div>
-                <p>Core infrastructure development and security establishment</p>
+            <div class="phase-section">
+                <div class="phase-title">Phase 1: Core Infrastructure Development</div>
+                <div class="phase-description">Core infrastructure development and security establishment</div>
                 
-                <div class="targets-table">
-                    <h4>Phase 1 Targets</h4>
+                <div class="targets-section">
+                    <div class="targets-title">Phase 1 Targets</div>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -246,13 +240,12 @@
                 </div>
             </div>
             
-            <div class="phase-card">
-                <div class="phase-number">Phase 2</div>
-                <div class="phase-title">Advanced Strategy Implementation</div>
-                <p>HyperCore integration and advanced strategy implementation</p>
+            <div class="phase-section">
+                <div class="phase-title">Phase 2: Advanced Strategy Implementation</div>
+                <div class="phase-description">HyperCore integration and advanced strategy implementation</div>
                 
-                <div class="targets-table">
-                    <h4>Phase 2 Targets</h4>
+                <div class="targets-section">
+                    <div class="targets-title">Phase 2 Targets</div>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -284,13 +277,12 @@
                 </div>
             </div>
             
-            <div class="phase-card">
-                <div class="phase-number">Phase 3</div>
-                <div class="phase-title">Multi-Chain Ecosystem Expansion</div>
-                <p>Cross-chain capabilities and institutional-grade features</p>
+            <div class="phase-section">
+                <div class="phase-title">Phase 3: Multi-Chain Ecosystem Expansion</div>
+                <div class="phase-description">Cross-chain capabilities and institutional-grade features</div>
                 
-                <div class="targets-table">
-                    <h4>Phase 3 Targets</h4>
+                <div class="targets-section">
+                    <div class="targets-title">Phase 3 Targets</div>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -322,13 +314,12 @@
                 </div>
             </div>
             
-            <div class="phase-card">
-                <div class="phase-number">Phase 4</div>
-                <div class="phase-title">Innovation & Technology Leadership</div>
-                <p>AI-powered optimization and next-generation DeFi solutions</p>
+            <div class="phase-section">
+                <div class="phase-title">Phase 4: Innovation & Technology Leadership</div>
+                <div class="phase-description">AI-powered optimization and next-generation DeFi solutions</div>
                 
-                <div class="targets-table">
-                    <h4>Phase 4 Targets</h4>
+                <div class="targets-section">
+                    <div class="targets-title">Phase 4 Targets</div>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -360,13 +351,12 @@
                 </div>
             </div>
             
-            <div class="phase-card">
-                <div class="phase-number">Phase 5</div>
-                <div class="phase-title">Industry Standard & Global Infrastructure</div>
-                <p>Market leadership and traditional finance integration</p>
+            <div class="phase-section">
+                <div class="phase-title">Phase 5: Industry Standard & Global Infrastructure</div>
+                <div class="phase-description">Market leadership and traditional finance integration</div>
                 
-                <div class="targets-table">
-                    <h4>Phase 5 Targets</h4>
+                <div class="targets-section">
+                    <div class="targets-title">Phase 5 Targets</div>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -398,51 +388,49 @@
                 </div>
             </div>
             
-            <h2>Technology Evolution Timeline</h2>
+            <h2>Technology Evolution</h2>
             
             <h3>Core Infrastructure Progression</h3>
-            <ul style="color: #cbd5e1; margin: 15px 0 15px 25px;">
+            <ul class="info-list">
                 <li><strong>Phase 1-2:</strong> HyperEVM native development with HyperCore integration</li>
                 <li><strong>Phase 3:</strong> Multi-chain architecture with unified governance</li>
                 <li><strong>Phase 4:</strong> AI-powered optimization and real-world asset integration</li>
                 <li><strong>Phase 5:</strong> Global infrastructure with traditional finance bridges</li>
             </ul>
             
-            <h3>Key Innovation Milestones</h3>
-            <ul style="color: #cbd5e1; margin: 15px 0 15px 25px;">
-                <li><strong>HyperCore Precompiles:</strong> Native blockchain optimizations for enhanced performance</li>
-                <li><strong>Cross-Chain Governance:</strong> Unified protocol control across multiple networks</li>
-                <li><strong>AI Strategy Engine:</strong> Machine learning for automated yield optimization</li>
-                <li><strong>Institutional Integration:</strong> Enterprise-grade features and compliance</li>
-                <li><strong>TradFi Bridges:</strong> Traditional finance system integration</li>
+            <h3>Innovation Milestones</h3>
+            <ul class="info-list">
+                <li><strong>HyperCore Precompiles:</strong> Native blockchain optimizations</li>
+                <li><strong>Cross-Chain Governance:</strong> Unified protocol control</li>
+                <li><strong>AI Strategy Engine:</strong> Machine learning optimization</li>
+                <li><strong>Institutional Integration:</strong> Enterprise-grade features</li>
+                <li><strong>TradFi Bridges:</strong> Traditional finance integration</li>
             </ul>
             
             <h2>Success Framework</h2>
             
-            <h3>Progressive Growth Targets</h3>
-            <ul style="color: #cbd5e1; margin: 15px 0 15px 25px;">
-                <li><strong>TVL Growth:</strong> Systematic scaling from $1M to $1B+ across development phases</li>
-                <li><strong>User Adoption:</strong> Community expansion from thousands to millions of active participants</li>
-                <li><strong>Technology Leadership:</strong> Industry-setting innovation in yield optimization and DeFi infrastructure</li>
-                <li><strong>Market Position:</strong> Recognition as the leading cross-chain DeFi protocol</li>
+            <h3>Progressive Growth Strategy</h3>
+            <ul class="info-list">
+                <li><strong>TVL Scaling:</strong> Systematic growth from $1M to $1B+ across phases</li>
+                <li><strong>User Expansion:</strong> Community growth from thousands to millions</li>
+                <li><strong>Technology Leadership:</strong> Industry-setting DeFi innovation</li>
+                <li><strong>Market Position:</strong> Recognition as leading cross-chain protocol</li>
             </ul>
             
-            <h2>Risk Management & Quality Assurance</h2>
+            <p style="text-align: center; margin-top: 40px; color: #94a3b8;">
+                <strong>Comprehensive framework for evolution from foundational infrastructure to industry-standard global DeFi platform</strong>
+            </p>
             
-            <h3>Phase-Gated Development</h3>
-            <ul style="color: #cbd5e1; margin: 15px 0 15px 25px;">
-                <li><strong>Security Audits:</strong> Comprehensive testing before each phase deployment</li>
-                <li><strong>Performance Validation:</strong> KPI achievement verification before progression</li>
-                <li><strong>Community Feedback:</strong> User input integration throughout development</li>
-                <li><strong>Market Adaptation:</strong> Flexible timeline adjustment based on ecosystem conditions</li>
-            </ul>
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid rgba(0, 212, 255, 0.2);">
             
-            <p style="margin-top: 40px; text-align: center;"><strong>This roadmap provides a comprehensive framework for HyperFlow Protocol's evolution from foundational infrastructure to industry-standard global DeFi platform.</strong></p>
-            
-            <hr style="margin: 40px 0; border: none; border-top: 1px solid #334155;">
-            
-            <p style="text-align: center; color: #64748b;"><strong>For complete protocol details, visit the <a href="https://clockerwork02.github.io" style="color: #14b8a6;">HyperFlow Protocol Whitepaper</a>.</strong></p>
+            <p style="text-align: center; color: #64748b;">
+                <strong>For complete protocol details: <a href="https://clockerwork02.github.io" style="color: #00d4ff;">HyperFlow Protocol Whitepaper</a></strong>
+            </p>
         </div>
+    </div>
+    
+    <div style="text-align: center; margin: 20px 0; color: #64748b; font-size: 0.9rem;">
+        clockerwork02.github.io
     </div>
 </body>
 </html>
