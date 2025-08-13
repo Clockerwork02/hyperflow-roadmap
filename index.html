@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Development Roadmap - HyperFlow Protocol</title>
-    <!-- Teal Mint Roadmap: 1755081412049 -->
+    <!-- ACTUAL Teal Mint Green: 1755081547065 -->
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0a1a1a 0%, #0f2020 50%, #0a1a1a 100%);
-            color: #e2f4f4;
+            background: linear-gradient(135deg, #042f2e 0%, #0a2e2a 50%, #042f2e 100%);
+            color: #f0fdfa;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -33,7 +33,7 @@
         
         .back-link {
             display: inline-block;
-            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
             color: #ffffff;
             padding: 12px 24px;
             border-radius: 8px;
@@ -41,17 +41,17 @@
             margin-bottom: 30px;
             transition: all 0.3s ease;
             font-weight: 500;
-            box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+            box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
         }
         
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
-            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            box-shadow: 0 6px 20px rgba(45, 212, 191, 0.4);
+            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
         }
         
         h1 {
-            background: linear-gradient(135deg, #14b8a6 0%, #10b981 50%, #059669 100%);
+            background: linear-gradient(135deg, #2dd4bf 0%, #99f6e4 50%, #14b8a6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -69,8 +69,8 @@
         }
         
         .content {
-            background: rgba(15, 35, 35, 0.8);
-            border: 1px solid rgba(20, 184, 166, 0.15);
+            background: rgba(4, 47, 46, 0.8);
+            border: 1px solid rgba(45, 212, 191, 0.15);
             border-radius: 16px;
             padding: 50px;
             backdrop-filter: blur(20px);
@@ -78,11 +78,11 @@
         }
         
         h2 {
-            color: #14b8a6;
+            color: #2dd4bf;
             font-size: 2rem;
             font-weight: 700;
             margin: 40px 0 25px 0;
-            border-bottom: 2px solid rgba(20, 184, 166, 0.3);
+            border-bottom: 2px solid rgba(45, 212, 191, 0.3);
             padding-bottom: 10px;
         }
         
@@ -91,14 +91,14 @@
         }
         
         h3 {
-            color: #10b981;
+            color: #14b8a6;
             font-size: 1.5rem;
             font-weight: 600;
             margin: 30px 0 20px 0;
         }
         
         h4 {
-            color: #059669;
+            color: #0d9488;
             font-size: 1.2rem;
             font-weight: 600;
             margin: 25px 0 15px 0;
@@ -123,166 +123,84 @@
         }
         
         strong {
-            color: #14b8a6;
+            color: #2dd4bf;
             font-weight: 600;
         }
         
-        .phase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+        .table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(45, 212, 191, 0.25);
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .phase-card {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-            border: 1px solid rgba(20, 184, 166, 0.2);
-            border-radius: 16px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(4, 47, 46, 0.9);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+            color: #ffffff;
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 14px 20px;
+            border-bottom: 1px solid rgba(45, 212, 191, 0.1);
+            color: #f0fdfa;
+            font-size: 0.95rem;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover {
+            background: rgba(45, 212, 191, 0.05);
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(4, 47, 46, 0.3);
+        }
+        
+        .highlight-section {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.08) 0%, rgba(153, 246, 228, 0.05) 100%);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 12px;
             padding: 30px;
-            transition: all 0.3s ease;
+            margin: 30px 0;
             position: relative;
-            overflow: hidden;
         }
         
-        .phase-card::before {
+        .highlight-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #14b8a6 0%, #10b981 50%, #059669 100%);
-        }
-        
-        .phase-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(20, 184, 166, 0.15);
-        }
-        
-        .phase-number {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #14b8a6 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 15px;
-        }
-        
-        .phase-title {
-            color: #10b981;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .phase-tvl {
-            color: #059669;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding: 8px 16px;
-            background: rgba(5, 150, 105, 0.1);
-            border-radius: 20px;
-            display: inline-block;
-        }
-        
-        .phase-features {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .phase-features li {
-            color: #cbd5e1;
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .phase-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-        
-        .timeline-section {
-            margin: 50px 0;
-        }
-        
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, #14b8a6 0%, #10b981 50%, #059669 100%);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            width: 45%;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
-            padding-right: 40px;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 55%;
-            text-align: left;
-            padding-left: 40px;
-        }
-        
-        .timeline-marker {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #14b8a6;
-            border: 4px solid #0a1a1a;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-marker {
-            right: -50px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-marker {
-            left: -50px;
-        }
-        
-        .timeline-content {
-            background: rgba(15, 35, 35, 0.6);
-            border: 1px solid rgba(20, 184, 166, 0.2);
-            border-radius: 12px;
-            padding: 25px;
+            height: 3px;
+            background: linear-gradient(90deg, #2dd4bf 0%, #99f6e4 50%, #14b8a6 100%);
+            border-radius: 12px 12px 0 0;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 25px;
-            margin: 40px 0;
+            margin: 30px 0;
         }
         
         .stat-item {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
-            border: 1px solid rgba(20, 184, 166, 0.2);
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(153, 246, 228, 0.05) 100%);
+            border: 1px solid rgba(45, 212, 191, 0.2);
             border-radius: 12px;
             padding: 25px;
             text-align: center;
@@ -291,14 +209,14 @@
         
         .stat-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.15);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.15);
         }
         
         .stat-value {
             display: block;
             font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #14b8a6 0%, #10b981 100%);
+            background: linear-gradient(135deg, #2dd4bf 0%, #99f6e4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -313,15 +231,26 @@
             font-weight: 500;
         }
         
+        a {
+            color: #2dd4bf;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #99f6e4;
+            text-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+        }
+        
         @media (max-width: 768px) {
             .container { padding: 25px 15px; }
             .content { padding: 30px 25px; }
             h1 { font-size: 2.2rem; }
-            .phase-grid { grid-template-columns: 1fr; }
-            .timeline::before { left: 20px; }
-            .timeline-item { width: calc(100% - 60px); left: 40px !important; text-align: left !important; padding: 0 !important; }
-            .timeline-marker { left: -50px !important; }
-            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            h2 { font-size: 1.6rem; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 10px 12px; }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+            .stat-value { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -334,102 +263,77 @@
         </div>
         
         <div class="content">
-            <h2>Strategic Development Timeline</h2>
             
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-value">5</span>
-                    <span class="stat-label">Development Phases</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">$1B+</span>
-                    <span class="stat-label">Target TVL</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">Multi-Year</span>
-                    <span class="stat-label">Timeline</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">Industry</span>
-                    <span class="stat-label">Leadership</span>
-                </div>
-            </div>
+<h2>Strategic Development Timeline</h2>
 
-            <div class="phase-grid">
-                <div class="phase-card">
-                    <div class="phase-number">01</div>
-                    <div class="phase-title">Foundation Phase</div>
-                    <div class="phase-tvl">TVL Target: $1M - $5M</div>
-                    <ul class="phase-features">
-                        <li>Core vault infrastructure deployment</li>
-                        <li>HyperCore native integration</li>
-                        <li>Basic yield optimization strategies</li>
-                        <li>Governance framework implementation</li>
-                        <li>Security audits and testing</li>
-                        <li>Community onboarding</li>
-                    </ul>
-                </div>
+<div class="stats-grid">
+    <div class="stat-item">
+        <span class="stat-value">5</span>
+        <span class="stat-label">Development Phases</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">$1B+</span>
+        <span class="stat-label">Target TVL</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Multi-Year</span>
+        <span class="stat-label">Timeline</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Industry</span>
+        <span class="stat-label">Leadership</span>
+    </div>
+</div>
 
-                <div class="phase-card">
-                    <div class="phase-number">02</div>
-                    <div class="phase-title">Enhancement Phase</div>
-                    <div class="phase-tvl">TVL Target: $5M - $25M</div>
-                    <ul class="phase-features">
-                        <li>Advanced delta-neutral strategies</li>
-                        <li>Cross-DEX liquidity aggregation</li>
-                        <li>Automated rebalancing mechanisms</li>
-                        <li>Enhanced governance features</li>
-                        <li>Mobile application launch</li>
-                        <li>Strategic partnerships</li>
-                    </ul>
-                </div>
+<h3>Phase 1: Foundation</h3>
+<p><strong>TVL Target:</strong> $1M - $5M</p>
+<ul>
+    <li>Core vault infrastructure deployment</li>
+    <li>HyperCore native integration</li>
+    <li>Basic yield optimization strategies</li>
+    <li>Governance framework implementation</li>
+</ul>
 
-                <div class="phase-card">
-                    <div class="phase-number">03</div>
-                    <div class="phase-title">Expansion Phase</div>
-                    <div class="phase-tvl">TVL Target: $25M - $100M</div>
-                    <ul class="phase-features">
-                        <li>Multi-chain bridge deployment</li>
-                        <li>Cross-chain yield strategies</li>
-                        <li>Institutional vault products</li>
-                        <li>Advanced risk management</li>
-                        <li>API and developer tools</li>
-                        <li>Global market expansion</li>
-                    </ul>
-                </div>
+<h3>Phase 2: Enhancement</h3>
+<p><strong>TVL Target:</strong> $5M - $25M</p>
+<ul>
+    <li>Advanced delta-neutral strategies</li>
+    <li>Cross-DEX liquidity aggregation</li>
+    <li>Automated rebalancing mechanisms</li>
+    <li>Enhanced governance features</li>
+</ul>
 
-                <div class="phase-card">
-                    <div class="phase-number">04</div>
-                    <div class="phase-title">Innovation Phase</div>
-                    <div class="phase-tvl">TVL Target: $100M - $500M</div>
-                    <ul class="phase-features">
-                        <li>AI-powered optimization algorithms</li>
-                        <li>Predictive yield strategies</li>
-                        <li>MEV protection mechanisms</li>
-                        <li>Institutional custody solutions</li>
-                        <li>Advanced analytics platform</li>
-                        <li>Research and development fund</li>
-                    </ul>
-                </div>
+<h3>Phase 3: Expansion</h3>
+<p><strong>TVL Target:</strong> $25M - $100M</p>
+<ul>
+    <li>Multi-chain bridge deployment</li>
+    <li>Cross-chain yield strategies</li>
+    <li>Institutional vault products</li>
+    <li>Advanced risk management</li>
+</ul>
 
-                <div class="phase-card">
-                    <div class="phase-number">05</div>
-                    <div class="phase-title">Leadership Phase</div>
-                    <div class="phase-tvl">TVL Target: $500M - $1B+</div>
-                    <ul class="phase-features">
-                        <li>Industry standard positioning</li>
-                        <li>TradFi integration protocols</li>
-                        <li>Global regulatory compliance</li>
-                        <li>Enterprise-grade infrastructure</li>
-                        <li>Ecosystem expansion initiatives</li>
-                        <li>Long-term sustainability model</li>
-                    </ul>
-                </div>
-            </div>
+<h3>Phase 4: Innovation</h3>
+<p><strong>TVL Target:</strong> $100M - $500M</p>
+<ul>
+    <li>AI-powered optimization algorithms</li>
+    <li>Predictive yield strategies</li>
+    <li>MEV protection mechanisms</li>
+    <li>Institutional custody solutions</li>
+</ul>
 
-            <div style="text-align: center; margin-top: 50px;">
-                <p><strong>For complete protocol details: <a href="https://clockerwork02.github.io" style="color: #14b8a6;">HyperFlow Protocol Whitepaper</a></strong></p>
-            </div>
+<h3>Phase 5: Leadership</h3>
+<p><strong>TVL Target:</strong> $500M - $1B+</p>
+<ul>
+    <li>Industry standard positioning</li>
+    <li>TradFi integration protocols</li>
+    <li>Global regulatory compliance</li>
+    <li>Enterprise-grade infrastructure</li>
+</ul>
+
+<div style="text-align: center; margin-top: 50px;">
+    <p><strong>For complete protocol details: <a href="https://clockerwork02.github.io">HyperFlow Protocol Whitepaper</a></strong></p>
+</div>
+
         </div>
     </div>
     
